@@ -124,3 +124,10 @@ h3 {
 /* A single post page */
 .post .entry-date { margin: 0 0 2rem; display: block; }
 .post h2 { margin-top: 2rem; }
+
+/* ---------- NAVIGATION ---------- */
+/* Your name at the top links home, but looks like a heading, not a link */
+.site-name { color: inherit; text-decoration: none; }
+
+/* The menu link for the page you're on is bold and not underlined */
+nav a.current { font-weight: bold; text-decoration: none; color: var(--text); }

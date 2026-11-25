@@ -8,15 +8,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- This is your HOME page: it is what people see first. It holds the About section. -->
 
   <header>
-    <!-- EDIT: your name -->
-    <h1>Your Name</h1>
+    <!-- EDIT: your name. Clicking it takes people back to the home (About) page.
+         This header is copied on every page, so if you change it, change it on all four. -->
+    <h1><a href="index.html" class="site-name">Your Name</a></h1>
     <nav>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-      <a href="#photos">Photos</a>
-      <a href="#safetyisms">Safetyisms</a>
+      <a href="index.html" class="current">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="photos.html">Photos</a>
+      <a href="safetyisms.html">Safetyisms</a>
     </nav>
   </header>
 
@@ -27,67 +29,6 @@
       <h2>About</h2>
       <p class="placeholder">[PLACEHOLDER] Write a few sentences about who you are, what you do, and what you care about.</p>
       <p class="placeholder">[PLACEHOLDER] A second paragraph is optional. Delete this one if you don't need it.</p>
-    </section>
-
-    <!-- ===================== CONTACT ===================== -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p class="placeholder">[PLACEHOLDER] The best way to reach me is by email.</p>
-      <ul>
-        <!-- EDIT: put your real address in BOTH places on the next line -->
-        <li>Email: <a href="mailto:you@example.com">you@example.com</a></li>
-        <!-- Delete any line you don't want -->
-        <li>LinkedIn: <a href="https://www.linkedin.com/">your profile link</a></li>
-      </ul>
-    </section>
-
-    <!-- ===================== PHOTOS ===================== -->
-    <!-- To ADD a photo: put the file in the "photos" folder, then copy one whole
-         <img ...> line below and change the file name and description.
-         To make one photo bigger, add class="wide" (2 columns wide),
-         class="tall" (2 rows tall) or class="big" (both) to its <img> tag.
-         To change how many photos sit side by side, edit --photo-columns in style.css. -->
-    <section id="photos">
-      <h2>Photos</h2>
-      <p class="placeholder">[PLACEHOLDER] One line about your photos, or delete this paragraph.</p>
-      <div class="photo-grid">
-        <img src="photos/example-1.svg" alt="[PLACEHOLDER] describe the photo" class="big">
-        <img src="photos/example-2.svg" alt="[PLACEHOLDER] describe the photo">
-        <img src="photos/example-3.svg" alt="[PLACEHOLDER] describe the photo">
-        <img src="photos/example-4.svg" alt="[PLACEHOLDER] describe the photo" class="wide">
-        <img src="photos/example-5.svg" alt="[PLACEHOLDER] describe the photo">
-        <img src="photos/example-6.svg" alt="[PLACEHOLDER] describe the photo">
-      </div>
-    </section>
-
-    <!-- ===================== SAFETYISMS ===================== -->
-    <!-- The professional side: your writing on AI safety, and links to your work. -->
-    <section id="safetyisms">
-      <h2>Safetyisms</h2>
-      <p class="placeholder">[PLACEHOLDER] One or two sentences on your interest in AI safety and what you write about here.</p>
-
-      <h3>Writing</h3>
-      <!-- To ADD a piece of writing: copy one whole <article> ... </article> block
-           and paste it at the TOP of this list, so the newest is first.
-           The link can go to a post on this site (see posts/TEMPLATE.html)
-           or to somewhere else, like Substack, Medium or LessWrong. -->
-      <article class="entry">
-        <a href="posts/example-post.html" class="entry-title">[PLACEHOLDER] Title of your first piece</a>
-        <span class="entry-date">Nov 2026</span>
-        <p class="placeholder">[PLACEHOLDER] One-sentence summary of what it's about.</p>
-      </article>
-      <article class="entry">
-        <a href="https://example.com" class="entry-title">[PLACEHOLDER] A piece published elsewhere</a>
-        <span class="entry-date">Oct 2026</span>
-        <p class="placeholder">[PLACEHOLDER] One-sentence summary.</p>
-      </article>
-
-      <h3>Work</h3>
-      <!-- Papers, projects, talks, code, anything relevant. One <li> line per item. -->
-      <ul class="work-list">
-        <li><a href="https://example.com">[PLACEHOLDER] Project or paper title</a> <span class="entry-date">2026</span></li>
-        <li><a href="https://example.com">[PLACEHOLDER] Talk, report or repository</a> <span class="entry-date">2025</span></li>
-      </ul>
     </section>
 
   </main>

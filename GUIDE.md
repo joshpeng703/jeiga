@@ -1,16 +1,25 @@
 # How to edit your website (no coding experience needed)
 
-Your website is two text files plus a folder of photos:
+Each section of your site is its own page, and each page is its own file. These hold the *words* and are the files you'll edit:
 
-- **index.html** holds all the *words* on your site. This is the file you'll edit.
+| File | Page | Notes |
+|---|---|---|
+| **index.html** | About | Your home page. Browsers automatically open the file called `index.html` when someone visits your address, which is why About is what visitors see first. |
+| **contact.html** | Contact | |
+| **photos.html** | Photos | Your photo grid. |
+| **safetyisms.html** | Safetyisms | Your writing and work links. |
+
+Then there are the supporting files:
+
 - **style.css** controls how it *looks* (colours, font, spacing, photo grid). You can mostly ignore it.
 - **posts/** holds any writing you publish on the site itself. TEMPLATE.html is a blank post to copy.
+- **CNAME** holds just your domain name (joshpeng.com). GitHub uses it to know which address belongs to this site. Leave it alone.
 - **photos/** is the folder your pictures go in. The ones there now are grey examples to delete once you add your own.
 
 ## 1. Seeing the site on your own computer
 
-1. Keep index.html, style.css and the photos folder together in one folder.
-2. Double-click **index.html**. It opens in your web browser. That's your site.
+1. Keep all the files and folders together in one folder, exactly as they are.
+2. Double-click **index.html**. It opens your home page in your web browser, and the menu links take you to the other pages.
 3. After you edit and save a file, refresh the browser tab to see the change.
 
 To edit, open the file in any plain text editor. On a Mac, TextEdit works if you first choose *Format → Make Plain Text*. On Windows, Notepad works. A free editor like **VS Code** colours the code so it's easier to read, but it's optional.
@@ -38,7 +47,7 @@ The tags you'll see:
 
 ## 3. Common edits
 
-**Replace placeholder text.** Anything grey and italic on the site starts with `[PLACEHOLDER]`. Find it in index.html, type your own words over it, and delete ` class="placeholder"` from that tag so it turns into normal black text. Before and after:
+**Replace placeholder text.** Anything grey and italic on the site starts with `[PLACEHOLDER]`. Find it in that page's file (see the table at the top), type your own words over it, and delete ` class="placeholder"` from that tag so it turns into normal black text. Before and after:
 
 ```html
 <p class="placeholder">[PLACEHOLDER] Write a few sentences about who you are...</p>
@@ -49,12 +58,14 @@ The tags you'll see:
 
 **Add an item to any list** (like Work links or Contact details). Copy a whole `<li>...</li>` line, paste it underneath, and change the words and link.
 
-**Add a piece of writing to Safetyisms.** Each entry in the Writing list is a block that starts with `<article class="entry">` and ends with `</article>`. Copy the whole block, paste it at the top of the list so the newest is first, then change the title, date, summary and link.
+**Add a piece of writing to Safetyisms.** Open **safetyisms.html**. Each entry in the Writing list is a block that starts with `<article class="entry">` and ends with `</article>`. Copy the whole block, paste it at the top of the list so the newest is first, then change the title, date, summary and link.
 
 - If the piece lives somewhere else (Substack, Medium, LessWrong, a paper), just put that web address in the link.
 - If you want it to live on your own site: copy **posts/TEMPLATE.html**, rename the copy to something simple like `posts/my-first-post.html`, write your post in it, and point the link at `posts/my-first-post.html`. The template has notes showing where everything goes.
 
-**Change your email.** In the Contact section, change `you@example.com` in *both* spots on that line (one is the link, one is the visible text).
+**Change your email.** In **contact.html**, change `you@example.com` in *both* spots on that line (one is the link, one is the visible text).
+
+**Change your name or the menu.** The top of every page (your name and the menu) is copied into each of the four page files. That keeps each file simple and self-contained, but it means that if you change your name or rename a menu link, you need to make the same change in all four files.
 
 **Change a colour or font.** Open style.css and look for lines marked `EDIT`. Colours are written as codes like `#2f5d50`. Search "colour picker" online to find codes you like.
 
@@ -75,7 +86,7 @@ Also give the file a simple name with no spaces, like `harbour-sunset.jpg`. Spac
 ### Step 2: Add it to the grid
 
 1. Put the file in the **photos** folder.
-2. In index.html, find the Photos section. Copy one whole `<img ...>` line and paste it where you want the photo to appear. Order in the file is order on the page.
+2. Open **photos.html**. Copy one whole `<img ...>` line and paste it where you want the photo to appear. Order in the file is order on the page.
 3. Change the file name and the description:
 
 ```html

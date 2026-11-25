@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- EDIT: the text in the browser tab -->
+  <title>Photos | Your Name</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <!-- EDIT: your name. Clicking it takes people back to the home (About) page.
+         This header is copied on every page, so if you change it, change it on all four. -->
+    <h1><a href="index.html" class="site-name">Your Name</a></h1>
+    <nav>
+      <a href="index.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="photos.html" class="current">Photos</a>
+      <a href="safetyisms.html">Safetyisms</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===================== PHOTOS ===================== -->
+    <!-- To ADD a photo: put the file in the "photos" folder, then copy one whole
+         <img ...> line below and change the file name and description.
+         To make one photo bigger, add class="wide" (2 columns wide),
+         class="tall" (2 rows tall) or class="big" (both) to its <img> tag.
+         To change how many photos sit side by side, edit --photo-columns in style.css. -->
+    <section id="photos">
+      <h2>Photos</h2>
+      <p class="placeholder">[PLACEHOLDER] One line about your photos, or delete this paragraph.</p>
+      <div class="photo-grid">
+        <img src="photos/example-1.svg" alt="[PLACEHOLDER] describe the photo" class="big">
+        <img src="photos/example-2.svg" alt="[PLACEHOLDER] describe the photo">
+        <img src="photos/example-3.svg" alt="[PLACEHOLDER] describe the photo">
+        <img src="photos/example-4.svg" alt="[PLACEHOLDER] describe the photo" class="wide">
+        <img src="photos/example-5.svg" alt="[PLACEHOLDER] describe the photo">
+        <img src="photos/example-6.svg" alt="[PLACEHOLDER] describe the photo">
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <!-- EDIT: your name -->
+    <p>&copy; 2026 Your Name</p>
+  </footer>
+
+</body>
+</html>
