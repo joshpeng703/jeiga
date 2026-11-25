@@ -67,7 +67,13 @@ The tags you'll see:
 
 **Change your name or the menu.** The top of every page (your name and the menu) is copied into each of the four page files. That keeps each file simple and self-contained, but it means that if you change your name or rename a menu link, you need to make the same change in all four files.
 
-**Change a colour or font.** Open style.css and look for lines marked `EDIT`. Colours are written as codes like `#2f5d50`. Search "colour picker" online to find codes you like.
+**Change a colour.** Open style.css and look for lines marked `EDIT` near the top. Colours are written as codes like `#2f5d50`. Search "colour picker" online to find codes you like.
+
+**Change a font.** The site uses two free fonts from Google Fonts: **Source Sans 3** for body text and **Open Sans** for headings. Switching takes two edits:
+
+1. Find a font you like on **fonts.google.com**, click it, click **Get font**, then **Get embed code**. Copy the `<link ...>` line that starts with `https://fonts.googleapis.com/css2?`.
+2. In each page file (index.html, contact.html, photos.html, safetyisms.html, and any posts), replace the existing `fonts.googleapis.com/css2` link line with the new one. This line is what downloads the font to visitors' browsers.
+3. In style.css, change the font name at the start of `--body-font` or `--heading-font` to the new name, inside quote marks, exactly as Google spells it.
 
 ## 4. Photos
 
