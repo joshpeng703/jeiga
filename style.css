@@ -141,3 +141,28 @@ h3 {
 
 /* The menu link for the page you're on is bold and not underlined */
 nav a.current { font-weight: bold; text-decoration: none; color: var(--text); }
+
+/* ---------- LONG TEXT (the About page) ---------- */
+/* Keeps lines to about 65 characters, which is comfortable to read,
+   and puts a clear gap between paragraphs. */
+.prose {
+  max-width: 34em;
+}
+
+.prose p {
+  margin: 0 0 1.25em;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+/* Links inside paragraphs: underline sits a little below the letters so it's easy to read */
+.prose a {
+  text-underline-offset: 0.15em;
+  text-decoration-thickness: 1px;
+}
+
+.prose a:hover {
+  text-decoration-thickness: 2px;
+}
