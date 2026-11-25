@@ -1,0 +1,126 @@
+/* This file controls how the site LOOKS. You rarely need to touch it.
+   Easy things to change are marked EDIT. */
+
+:root {
+  --text: #1a1a1a;        /* EDIT: main text colour */
+  --muted: #6b6b6b;       /* grey used for small text */
+  --accent: #2f5d50;      /* EDIT: link colour */
+  --background: #fdfcfa;  /* EDIT: page background */
+}
+
+body {
+  margin: 0 auto;
+  max-width: 640px;
+  padding: 3rem 1.5rem;
+  font-family: Georgia, "Times New Roman", serif;  /* EDIT: font */
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--text);
+  background: var(--background);
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 0 0 0.75rem;
+}
+
+nav a {
+  margin-right: 1.25rem;
+  font-family: system-ui, sans-serif;
+  font-size: 0.95rem;
+}
+
+a {
+  color: var(--accent);
+}
+
+section {
+  padding: 2.5rem 0;
+  border-top: 1px solid #e6e3dd;
+}
+
+header {
+  padding-bottom: 2rem;
+}
+
+.sayings li {
+  margin-bottom: 0.5rem;
+}
+
+/* Placeholder text is shown in grey italics so you can spot what still needs
+   writing. When you replace the text, also delete class="placeholder". */
+.placeholder {
+  color: var(--muted);
+  font-style: italic;
+}
+
+footer {
+  border-top: 1px solid #e6e3dd;
+  padding-top: 1.5rem;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+/* ---------- PHOTO GRID ---------- */
+#photos {
+  container-type: inline-size;  /* lets the grid measure its own width */
+}
+
+.photo-grid {
+  --photo-columns: 3;     /* EDIT: how many photos side by side (2, 3 or 4 work well) */
+  --photo-gap: 8px;       /* EDIT: space between photos */
+  display: grid;
+  grid-template-columns: repeat(var(--photo-columns), 1fr);
+  /* every row is exactly as tall as a column is wide, so tiles are square */
+  grid-auto-rows: calc((100cqw - (var(--photo-columns) - 1) * var(--photo-gap)) / var(--photo-columns));
+  grid-auto-flow: dense;  /* fills gaps automatically, so big photos never leave holes */
+  gap: var(--photo-gap);
+}
+
+.photo-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* photos are cropped to fit their tile, never stretched */
+  display: block;
+  border-radius: 2px;
+}
+
+/* Optional sizes: add class="wide", "tall" or "big" to an <img> */
+.photo-grid .wide { grid-column: span 2; }
+.photo-grid .tall { grid-row: span 2; }
+.photo-grid .big  { grid-column: span 2; grid-row: span 2; }
+
+/* On phones, always show 2 photos per row so they stay a decent size */
+@media (max-width: 500px) {
+  .photo-grid { --photo-columns: 2; }
+}
+
+/* ---------- SAFETYISMS (writing + work) ---------- */
+h3 {
+  font-size: 1rem;
+  font-family: system-ui, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin: 2rem 0 0.75rem;
+}
+
+.entry { margin-bottom: 1.25rem; }
+.entry p { margin: 0.2rem 0 0; }
+.entry-title { font-weight: bold; }
+.entry-date {
+  font-family: system-ui, sans-serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-left: 0.5rem;
+}
+.work-list li { margin-bottom: 0.4rem; }
+
+/* A single post page */
+.post .entry-date { margin: 0 0 2rem; display: block; }
+.post h2 { margin-top: 2rem; }
